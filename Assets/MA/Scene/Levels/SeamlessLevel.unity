@@ -9663,7 +9663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f73600094c32784aab61bc2bcd33e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespd: 10
+  movespd: 3
   maxhealh: 100
   curhealth: 0
   atktimer: 0

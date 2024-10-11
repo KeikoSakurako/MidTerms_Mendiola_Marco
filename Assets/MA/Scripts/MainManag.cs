@@ -8,7 +8,7 @@ public class MainManag : MonoBehaviour
     public void StartGame()
     {
         //SceneManager.LoadScene("GaunletLevel");
-        SceneManager.LoadScene("Deloglvl");
+        SceneManager.LoadScene("SeamlessLevel");
     }
 
     

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  movespd: 2
+  movespd: 1
   dmg: 2
   maxhealth: 10
   curhealth: 0
