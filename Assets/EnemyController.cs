@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public Transform player;
+    public EnemyCameraSpawn spawner; //reference for the enemycameraspawn
+
     public float movespd = 5f;
     Rigidbody2D rb;
 
@@ -24,10 +26,9 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        
         //starting health
         curhealth = maxhealth;   
+
     }
 
     // Update is called once per frame
@@ -48,6 +49,7 @@ public class EnemyController : MonoBehaviour
 
     }
 
+    //finding the player
     private void GetTarget()
     {
         //reference of the location of the player
@@ -58,6 +60,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    //this is use for the enemy spawn the camera of sir made
+    public void Initialize(Transform players, EnemyCameraSpawn spawners)
+    {
+        player = players;
+        spawner = spawners;
+    }
 
     private void FixedUpdate()
     {
@@ -68,6 +76,7 @@ public class EnemyController : MonoBehaviour
 
             Vector3 scale = transform.localScale;
 
+            //flip the scale of the enemy sprite
             if (player.transform.position.x > transform.position.x)
             {
                 scale.x = Mathf.Abs(scale.x) * -1 * (isright ? -1 : 1);
@@ -86,7 +95,7 @@ public class EnemyController : MonoBehaviour
        
     }
 
-
+    //to damage the player
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -96,6 +105,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    //when the damage the nemy
     public void DamageEnemy(int dmg)
     {
         curhealth -= dmg;
@@ -103,7 +113,13 @@ public class EnemyController : MonoBehaviour
         if (curhealth <= 0)
         {
             StageManager.instanse.KillCount(1);
-            Destroy(gameObject);
+
+            //use for objectpulling
+            gameObject.SetActive(false);
+            spawner.ReturnEnemyToPool(this);
+
+            //This is for the instance and not objectpulling
+            //Destroy(gameObject);
 
 
         }

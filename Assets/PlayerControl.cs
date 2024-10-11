@@ -10,11 +10,10 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] float movespd = 5f; // movement speed
     public float maxhealh = 100f;
     public float curhealth;
-    public float atktimer;
-    public float atkrate = 0.5f;
-
-   
-
+    
+    //atk input soon
+    //public float atktimer;
+    //public float atkrate = 0.5f;
 
     public bool isright = true;
 
@@ -23,11 +22,8 @@ public class PlayerControl : MonoBehaviour
     public Image healthbar; 
     private Rigidbody2D rb; // Rididbogy reference
     
-
     //calucation
     Vector2 move;
-
-    
 
     private void Awake()
     {
@@ -50,21 +46,13 @@ public class PlayerControl : MonoBehaviour
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
 
-        
-        //use for later but for input the atk in the player
-        if (Input.GetMouseButtonDown(0) && atktimer <= 0f)
-        {
-            
-            atktimer = atkrate;
-        }
-        else
-        {
-            
-            atktimer -= Time.deltaTime;
-        }
+        //to have a consistent dialgonal spd
+        move = new Vector2(move.x, move.y).normalized;
 
-        //Moving the animation
-        if(move != Vector2.zero)
+        //add like a timer for the atk animation
+
+        //walking animation
+        if (move != Vector2.zero)
         {
             anim.SetBool("move", true);
         }
@@ -91,7 +79,6 @@ public class PlayerControl : MonoBehaviour
         //movement for the player
         rb.MovePosition(rb.position + move * movespd * Time.deltaTime);
         
-        
     }
 
     public void Flip()
@@ -102,13 +89,7 @@ public class PlayerControl : MonoBehaviour
         transform.localScale = localscale;
     }
 
-
-    private void Shoot()
-    {
-        //Play the animation    
-
-
-    }
+    //add soon to play the animation atk
 
     public void DamagePlayer(int dmg)
     {

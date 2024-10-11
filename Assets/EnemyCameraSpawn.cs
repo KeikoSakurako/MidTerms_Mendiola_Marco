@@ -4,48 +4,70 @@ using UnityEngine;
 
 public class EnemyCameraSpawn : MonoBehaviour
 {
-    [SerializeField] GameObject spawnee;
-    [SerializeField] float sizeX = 1f;
-    [SerializeField] float sizeY = 1f;
-    [SerializeField] float spawnCooldown = 1f;
-
-    private float spawnTime;
+    [SerializeField] PlayerControl _player;
+    [SerializeField] EnemyController _enemyPrefab;
+    [SerializeField] float _spawnInterval;
+    [SerializeField] int _enemyLimit = 10;
+    Queue<EnemyController> _availableEnemies = new();
+    private Camera _camera;
+    private void Awake()
+    {
+        _camera = Camera.main;
+    }
     private void Start()
     {
-        spawnTime = spawnCooldown;
+        InstantiateEnemies();
+        InvokeRepeating(nameof(SpawnEnemy), 1f, _spawnInterval);
     }
 
-    private void Update()
+    private void InstantiateEnemies()
     {
-        if(spawnTime > 0)
+        for (int i = 0; i < _enemyLimit; i++)
         {
-            spawnTime = Time.deltaTime;
-
+            // Spawn enemies
+            var enemy = Instantiate(_enemyPrefab, transform);
+            enemy.Initialize(_player.transform, this);
+            enemy.gameObject.SetActive(false);
+            _availableEnemies.Enqueue(enemy);
         }
-
-        if(spawnTime <= 0)
-        {
-            Spawn();
-            spawnTime = spawnCooldown;
-
-        }
-
     }
 
-    public void Spawn()
+    public void ReturnEnemyToPool(EnemyController enemy)
     {
-        //float xPos = Random.Range(-sizeX, sizeX) + transform.position.x;
-        //float yPos = Random.Range(-sizeY, sizeY) + transform.position.y;
-        //Vector3 spawnPosition = new Vector3(xPos, yPos, 0);
-        //Instantiate(spawnee, spawnPosition, Quaternion.identity);
-
-        float xPos = (Random.value - 0.5f) * 2 * sizeX + gameObject.transform.position.x;
-        float yPos = (Random.value - 0.5f) * 2 * sizeY + gameObject.transform.position.y;
-
-        var spawn = Instantiate(spawnee);
-        spawn.transform.position = new Vector3(xPos,yPos,0);
-
+        _availableEnemies.Enqueue(enemy);
+        print($"{enemy.name} returned to queue");
     }
 
-
+    private void SpawnEnemy()
+    {
+        // Initial Random.Range determines Left/Right side
+        var spawnX = Random.Range(0f, 1f);
+        if (spawnX < 0.5f)
+        {
+            spawnX = 0 - Random.Range(0f, 1f);
+        }
+        else
+        {
+            spawnX = 1 + Random.Range(0f, 1f);
+        }
+        var spawnY = Random.Range(0f, 1f);
+        if (spawnY < 0.5f)
+        {
+            spawnY = 0 - Random.Range(0f, 1f);
+        }
+        else
+        {
+            spawnY = 1 + Random.Range(0f, 1f);
+        }
+        var spawnPosition = _camera.ViewportToWorldPoint(new(spawnX, spawnY, 10f));
+        if (_availableEnemies.Count <= 0)
+        {
+            // Debug.LogWarning($"No enemy returned from queue. Instantiating {_enemyLimit} enemies. Will be used on next call.");
+            // InstantiateEnemies();
+            return;
+        }
+        var enemy = _availableEnemies.Dequeue();
+        enemy.transform.position = spawnPosition;
+        enemy.gameObject.SetActive(true);
+    }
 }
