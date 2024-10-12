@@ -60,6 +60,7 @@ public class StageManager : MonoBehaviour
         PausePanel.SetActive(true);
         Time.timeScale = 0;
         ispause = true;
+
     }
 
 
@@ -105,6 +106,20 @@ public class StageManager : MonoBehaviour
 
         //Kill display
         scoretext.text = "Kill: " + killfeed.ToString();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(PausePanel.activeInHierarchy == false)
+            {
+                PauseMenu();
+            }
+            else
+            {
+                ContinueGame();
+            }
+
+        }
+
     }
 
     public void KillCount(int k)

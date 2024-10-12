@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/MA/Scene/Levels/SeamlessLevel.unity
     guid: 173a65e63ba87444abddd487f26e2c0b
   - enabled: 1
+    path: Assets/Scenes/lvlmo.unity
+    guid: 9b03b42f5487ec4468ba0d7df7100909
+  - enabled: 1
     path: Assets/Scenes/Deloglvl.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

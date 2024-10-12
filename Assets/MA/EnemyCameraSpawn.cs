@@ -5,10 +5,14 @@ using UnityEngine;
 public class EnemyCameraSpawn : MonoBehaviour
 {
     [SerializeField] PlayerControl _player;
-    [SerializeField] EnemyController _enemyPrefab;
+    [SerializeField] EnemyController _enemyPrefab;   
+
     [SerializeField] float _spawnInterval;
     [SerializeField] int _enemyLimit = 10;
-    Queue<EnemyController> _availableEnemies = new();
+    Queue<EnemyController> _availableEnemies = new(); 
+
+   
+
     private Camera _camera;
     private void Awake()
     {
@@ -34,9 +38,12 @@ public class EnemyCameraSpawn : MonoBehaviour
 
     public void ReturnEnemyToPool(EnemyController enemy)
     {
-        _availableEnemies.Enqueue(enemy);
-        print($"{enemy.name} returned to queue");
+       _availableEnemies.Enqueue(enemy);
+       print($"{enemy.name} returned to queue");
     }
+
+   
+
 
     private void SpawnEnemy()
     {

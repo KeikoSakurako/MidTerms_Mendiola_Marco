@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db35133ff6f36b34db89248f22ba8c92, type: 3}
+  m_Name: Stage Test
+  m_EditorClassIdentifier: 
+  stageEvent:
+  - eventType: 0
+    time: 1
+    message: 5 sec in the clock
+    enemytospawn: {fileID: 11400000, guid: 8844bf3cddea61e47979c2a10c076e36, type: 2}
+    objspawn: {fileID: 0}
+    count: 5
+    isRepeatedEvent: 0
+    repeatsec: 0
+    repeatCount: 0
+  - eventType: 0
+    time: 10
+    message: 10 sec in the clock
+    enemytospawn: {fileID: 11400000, guid: b9b5fdd7c84eca8498c89024230af9f5, type: 2}
+    objspawn: {fileID: 0}
+    count: 10
+    isRepeatedEvent: 0
+    repeatsec: 0
+    repeatCount: 0
+  - eventType: 0
+    time: 15
+    message: 15 sec in the clock
+    enemytospawn: {fileID: 11400000, guid: 8844bf3cddea61e47979c2a10c076e36, type: 2}
+    objspawn: {fileID: 0}
+    count: 15
+    isRepeatedEvent: 0
+    repeatsec: 0
+    repeatCount: 0
+  - eventType: 0
+    time: 30
+    message: 15 sec in the clock
+    enemytospawn: {fileID: 11400000, guid: 8844bf3cddea61e47979c2a10c076e36, type: 2}
+    objspawn: {fileID: 0}
+    count: 15
+    isRepeatedEvent: 0
+    repeatsec: 0
+    repeatCount: 0
+  - eventType: 0
+    time: 60
+    message: 15 sec in the clock
+    enemytospawn: {fileID: 11400000, guid: 57d58877c465d9a4e8ed51e884a53a50, type: 2}
+    objspawn: {fileID: 0}
+    count: 50
+    isRepeatedEvent: 0
+    repeatsec: 0
+    repeatCount: 0

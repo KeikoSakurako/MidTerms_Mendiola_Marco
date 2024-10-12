@@ -56,7 +56,11 @@ public class EnemyController : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player"))
         {
            // player = GameObject.FindGameObjectWithTag("Player").transform;
+            
+           
             player = FindObjectOfType<PlayerControl>().transform;
+
+            
         }
     }
 

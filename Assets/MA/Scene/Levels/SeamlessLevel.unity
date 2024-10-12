@@ -905,7 +905,7 @@ MonoBehaviour:
   _player: {fileID: 1550873707}
   _enemyPrefab: {fileID: 342180700277313809, guid: 054bbadaebdf24b4eabe94d324b1c073, type: 3}
   _spawnInterval: 0.5
-  _enemyLimit: 3
+  _enemyLimit: 100
 --- !u!1 &131926771
 GameObject:
   m_ObjectHideFlags: 0
@@ -11658,18 +11658,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0018611848, y: 0.039705448}
+  m_Offset: {x: 0.003998272, y: 0.1275981}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.1, y: 0.21}
+    oldSize: {x: 0.3125, y: 0.65625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0590538, y: 0.13058911}
+  m_Size: {x: 0.17624356, y: 0.38840735}
   m_EdgeRadius: 0
 --- !u!212 &1857369347
 SpriteRenderer:

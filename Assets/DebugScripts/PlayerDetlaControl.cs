@@ -3,41 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class PlayerControl : MonoBehaviour
+public class PlayerDetlaControl : MonoBehaviour
 {
     //Stats
     [SerializeField] float movespd = 5f; // movement speed
     public float maxhealh = 100f;
     public float curhealth;
-    
-    //atk input soon
-    //public float atktimer;
-    //public float atkrate = 0.5f;
 
     public bool isright = true;
 
+    //EditInOriginal
+    public float lastXAtk;
+    public float lastYAtk;
+
+    public int armor = 0;
+
     //Reference
     public Animator anim;
-    public Image healthbar; 
+    public Image healthbar;
     private Rigidbody2D rb; // Rididbogy reference
-    
+
+    public LevelManager lvl;
+    public Coin coins;
+
     //calucation
-    Vector2 move;
+    public Vector2 move;
+
+    SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         //spriteneder get compoint
         curhealth = maxhealh;
         rb = GetComponent<Rigidbody2D>();
-        
-
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        lvl = GetComponent<LevelManager>();
+        coins = GetComponent<Coin>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        lastXAtk = 1f;
+        lastYAtk = 1f;
     }
 
     // Update is called once per frame
@@ -45,6 +53,16 @@ public class PlayerControl : MonoBehaviour
     {
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
+
+        //LastAtk
+        if (move.x != 0)
+        {
+            lastXAtk = move.x;
+        }
+        if (move.y != 0)
+        {
+            lastYAtk = move.y;
+        }
 
         //to have a consistent dialgonal spd
         move = new Vector2(move.x, move.y).normalized;
@@ -62,14 +80,14 @@ public class PlayerControl : MonoBehaviour
         }
 
         //Fliping the sprite
-         if (move.x < 0 && !isright)
+        if (move.x < 0)
         {
-            Flip();
+            _spriteRenderer.flipX = true;
         }
 
-        if (move.x > 0 && isright)
+        if (move.x > 0)
         {
-            Flip();
+            _spriteRenderer.flipX = false;
         }
 
     }
@@ -78,7 +96,7 @@ public class PlayerControl : MonoBehaviour
     {
         //movement for the player
         rb.MovePosition(rb.position + move * movespd * Time.deltaTime);
-        
+
     }
 
     public void Flip()
@@ -93,7 +111,10 @@ public class PlayerControl : MonoBehaviour
 
     public void DamagePlayer(int dmg)
     {
-        
+        //Armor Reference
+        ApplyArmor(ref dmg);
+
+        //Damage Calcu
         healthbar.fillAmount = curhealth / maxhealh;
         curhealth -= dmg;
 
@@ -107,6 +128,26 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    private void ApplyArmor(ref int dmg)
+    {
+        dmg -= armor;
+        if (dmg < 0) { dmg = 0; }
+
+    }
+
+
+    public void Heal(int amount)
+    {
+        if (curhealth <= 0) { return; }
+
+        
+        curhealth += amount;
+        if(curhealth > maxhealh)
+        {
+            curhealth = maxhealh;
+        }
+        healthbar.fillAmount = curhealth / maxhealh;
+    }
 
 
 }

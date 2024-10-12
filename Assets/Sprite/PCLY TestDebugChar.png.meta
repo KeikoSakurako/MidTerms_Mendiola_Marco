@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,385 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 189
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7baa262c9558d4349b06c79ff94309d2
+      internalID: 1414622632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 211
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb8b730e0fb8144da5fd0679a0c7dec
+      internalID: 1142580235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 211
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994bb0d50794904479400417ebc4669e
+      internalID: -601867312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 215
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e408f681981b3b44afc6a78d086008a
+      internalID: -1862076605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_4
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 189
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61414677379f3294aa7b56e603e46d3e
+      internalID: -781679113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 180
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b6a84c791b02a48a4e8f37be1a0040
+      internalID: -648939046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_6
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 194
+        width: 4
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a27b81852a96db4cb77282ef315abeb
+      internalID: -14617733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_7
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 196
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b31697bbf89b446ba718fad2cfb5ac
+      internalID: -631270525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_8
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 197
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b194cc9f7c18954c8b8ba756b331009
+      internalID: 1139084015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 176
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378237de7b063564aa45a27f944a7db9
+      internalID: -1115735541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_10
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 188
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8f6ed3b77dd7645aa858ec683780a4
+      internalID: 1438027219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_11
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 181
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4dc846d90f5f9540a5a47c1b4a6a5bd
+      internalID: -398924771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_12
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 148
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea79faf2451028849bc5d16140518dfb
+      internalID: 1910576451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_13
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 135
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141b8ec8a2288ce46b50cfaa1b57074b
+      internalID: -1410279656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_14
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 129
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6636c39520e799946abfde875e626e1d
+      internalID: 869498935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_15
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 117
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e289af4ad9ceae04b9d3658695ed01bd
+      internalID: 526139421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 114
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89ce909517c9974bae87bd234586a4f
+      internalID: -1697498433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCLY TestDebugChar_17
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 114
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c774b469c447345be683410a21e77e
+      internalID: -467189047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +484,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PCLY TestDebugChar_0: 1414622632
+      PCLY TestDebugChar_1: 1142580235
+      PCLY TestDebugChar_10: 1438027219
+      PCLY TestDebugChar_11: -398924771
+      PCLY TestDebugChar_12: 1910576451
+      PCLY TestDebugChar_13: -1410279656
+      PCLY TestDebugChar_14: 869498935
+      PCLY TestDebugChar_15: 526139421
+      PCLY TestDebugChar_16: -1697498433
+      PCLY TestDebugChar_17: -467189047
+      PCLY TestDebugChar_2: -601867312
+      PCLY TestDebugChar_3: -1862076605
+      PCLY TestDebugChar_4: -781679113
+      PCLY TestDebugChar_5: -648939046
+      PCLY TestDebugChar_6: -14617733
+      PCLY TestDebugChar_7: -631270525
+      PCLY TestDebugChar_8: 1139084015
+      PCLY TestDebugChar_9: -1115735541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630e31e01b3bd1d4a9f767c3a42641f3, type: 3}
+  m_Name: ThrowKnife (Enchance))
+  m_EditorClassIdentifier: 
+  upgradetype: 0
+  upgradename: Knife Stillness
+  upgradeIcon: {fileID: 1448139286, guid: 8a0a6a048ad2a0045a7d815a784226a1, type: 3}
+  weapondata: {fileID: 11400000, guid: 904051e48e7281041b434488627a3337, type: 2}
+  weaponUpgradeStats:
+    dmg: 0
+    timetoatk: -1

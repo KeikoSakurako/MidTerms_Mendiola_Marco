@@ -69,7 +69,20 @@ public class WorldScroll : MonoBehaviour
                 int tileToUpdateY = CalculatetheTile(playercurrenttile.y + pov_y, false);
 
                 GameObject tile = terraintiles[tileToUpdateX, tileToUpdateY];
-                tile.transform.position = CalcilateTilePosition(playercurrenttile.x + pov_x, playercurrenttile.y + pov_y);
+                //tile.transform.position = CalcilateTilePosition(playercurrenttile.x + pov_x, playercurrenttile.y + pov_y);
+
+                //New to have a new position
+                Vector3 newPosition = CalcilateTilePosition(playercurrenttile.x + pov_x, playercurrenttile.y + pov_y);
+
+                if(newPosition != tile.transform.position)
+                {
+                    tile.transform.position = newPosition;
+
+                    //Create to instance to have a breakable objects
+                    terraintiles[tileToUpdateX, tileToUpdateY].GetComponent<TerrainTile>().Spawn();
+                }
+
+                
 
             }
 

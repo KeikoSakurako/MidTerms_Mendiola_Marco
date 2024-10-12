@@ -6,6 +6,9 @@ public class TerrainTile : MonoBehaviour
 {
     [SerializeField] Vector2Int tileposition;
 
+    //To spawn breakable object
+    [SerializeField] List<SpawnableObj> spawnobjects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,4 +22,14 @@ public class TerrainTile : MonoBehaviour
     {
         
     }
+
+    public void Spawn()
+    {
+        for (int i = 0; i < spawnobjects.Count; i++)
+        {
+            spawnobjects[i].Spawn();
+        }
+
+    }
+
 }
